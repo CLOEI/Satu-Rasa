@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { AiOutlineMail, AiOutlineGithub } from "react-icons/ai";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 import { RxStack } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -31,12 +32,13 @@ export default function Home({ projects }: { projects: IProjects[] }) {
   return (
     <>
       <Head>
-        <title>Cendy</title>
+        <title>Satu Rasa</title>
         <meta
           name="description"
-          content="Full stack developer specialize in web development using JavaScript, CSS, HTML, and probably more. love to tinker with computers and stuff!"
+          content="Food vlogger dan pencoba kuliner di Indonesia"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="max-w-sm mx-auto p-2">
         <AnimatePresence>
@@ -47,7 +49,7 @@ export default function Home({ projects }: { projects: IProjects[] }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <p className="font-bold text-2xl">Cendy</p>
+              <p className="font-bold text-2xl">Satu Rasa</p>
               <motion.div
                 layout="position"
                 layoutId="button"
@@ -96,9 +98,9 @@ export default function Home({ projects }: { projects: IProjects[] }) {
           <div className="h-screen flex items-center justify-center flex-col space-y-6">
             <div className="text-center relative">
               <motion.h1 className="text-5xl font-bold">
-                Hi, I&apos;m Cendy.
+                Satu Rasa.
               </motion.h1>
-              <p className="text-paragraph">a full-stack developer.</p>
+              <p className="text-paragraph">ngiler tiap scrollnya.</p>
               {!isVisible && (
                 <div className="absolute bottom-0 right-[50%] translate-y-[150%] translate-x-[50%]">
                   <motion.div
@@ -111,8 +113,8 @@ export default function Home({ projects }: { projects: IProjects[] }) {
                   >
                     <motion.a
                       onClick={goToProjects}
-                      className="icon-button hover:after:content-['Projects'] group"
-                      aria-label="Project list"
+                      className="icon-button hover:after:content-['Videos'] group"
+                      aria-label="Video list"
                       role="button"
                       tabIndex={0}
                       variants={item}
@@ -123,29 +125,29 @@ export default function Home({ projects }: { projects: IProjects[] }) {
                       />
                     </motion.a>
                     <motion.a
-                      href="https://github.com/CLOEI"
+                      href="https://www.instagram.com/itu_saturasa/"
                       target="_blank"
                       rel="noreferrer"
-                      className="icon-button hover:after:content-['GitHub'] group"
-                      aria-label="GitHub"
+                      className="icon-button hover:after:content-['Instagram'] group"
+                      aria-label="Instagram"
                       role="button"
                       tabIndex={0}
                       variants={item}
                     >
-                      <AiOutlineGithub
+                      <FaInstagram
                         size={24}
                         className="group-hover:text-rose-500"
                       />
                     </motion.a>
                     <motion.a
-                      href="mailto:contact@cendy.xyz"
-                      className="icon-button hover:after:content-['Email'] group"
-                      aria-label="Email"
+                      href="https://www.tiktok.com/@itu_saturasa"
+                      className="icon-button hover:after:content-['Tiktok'] group"
+                      aria-label="Tiktok"
                       role="button"
                       tabIndex={0}
                       variants={item}
                     >
-                      <AiOutlineMail
+                      <FaTiktok
                         size={24}
                         className="group-hover:text-rose-500"
                       />

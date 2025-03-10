@@ -3,6 +3,7 @@ import { motion, useAnimationControls, useInView } from "framer-motion";
 
 import { BiLinkExternal } from "react-icons/bi";
 import { VscGithubAlt } from "react-icons/vsc";
+import { FaInstagram, FaTiktok } from "react-icons/fa";
 
 import type { IProjects } from "@/types/contentful";
 import { useEffect, useRef } from "react";
@@ -35,7 +36,7 @@ function ProjectCard({ project }: { project: IProjects }) {
         </div>
         {width && width >= 600 && (
           <motion.div className="absolute top-0 right-0 space-y-3 pt-2 translate-x-[150%] overflow-hidden" variants={container} initial="hidden" animate={control}>
-            {project.fields.tags.map((tag, i) => {
+            {project.fields.tags && project.fields.tags.map((tag, i) => {
               return (
                 <motion.div key={i} variants={item} className="cursor-pointer">
                   {tagToComponent(tag)}
@@ -45,19 +46,19 @@ function ProjectCard({ project }: { project: IProjects }) {
           </motion.div>
         )}
       </div>
-      <div className='z-10 bg-card w-[90%] rounded-md mx-auto p-4 relative -mt-10'>
+      <div className='z-10 bg-[#EFDCAB] w-[90%] rounded-md mx-auto p-4 relative -mt-10'>
         <h2 className='font-bold text-3xl mb-2'>{project.fields.title}</h2>
         <p className="text-paragraph">{project.fields.description}</p>
         <div className='w-max ml-auto space-x-2'>
-          {project.fields.repositoryLink && project.fields.repositoryLink.length > 0 && (
-            <a href={project.fields.repositoryLink} target="_blank" rel="noreferrer" className="inline-block hover:opacity-75 p-1" aria-label='Source code' role="button" tabIndex={0}>
-            <VscGithubAlt className="text-rose-500"/>
+          {project.fields.instagramLink && project.fields.instagramLink.length > 0 && (
+            <a href={project.fields.instagramLink} target="_blank" rel="noreferrer" className="inline-block hover:opacity-75 p-1" aria-label='Source code' role="button" tabIndex={0}>
+            <FaInstagram className="text-rose-500"/>
           </a>
           )}
-          {project.fields.liveViewLink && project.fields.liveViewLink.length > 0 && (
-              <a href={project.fields.liveViewLink} target="_blank" rel="noreferrer"
+          {project.fields.tiktokLink && project.fields.tiktokLink.length > 0 && (
+              <a href={project.fields.tiktokLink} target="_blank" rel="noreferrer"
                  className="inline-block hover:opacity-75 p-1" aria-label='Live preview' role="button" tabIndex={0}>
-                <BiLinkExternal className="text-rose-500"/>
+                <FaTiktok className="text-rose-500"/>
               </a>)
           }
         </div>

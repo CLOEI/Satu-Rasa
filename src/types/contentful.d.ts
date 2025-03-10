@@ -13,13 +13,13 @@ export interface IProjectsFields {
   description: string;
 
   /** Tags */
-  tags: string[];
+  tags?: string[] | undefined;
 
-  /** Repository Link */
-  repositoryLink?: string | undefined;
+  /** Instagram link */
+  instagramLink?: string | undefined;
 
-  /** Live-view Link */
-  liveViewLink?: string | undefined;
+  /** Tiktok link */
+  tiktokLink?: string | undefined;
 }
 
 export interface IProjects extends Entry<IProjectsFields> {
