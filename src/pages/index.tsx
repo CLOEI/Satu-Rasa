@@ -80,6 +80,7 @@ export default function Home({ projects }: { projects: IProjects[] }) {
                 </motion.a>
                 <motion.a
                   href="https://www.tiktok.com/@itu_saturasa"
+                  target="_blank"
                   className="icon-button hover:after:content-['Tiktok'] group"
                   aria-label="Tiktok"
                   role="button"
@@ -141,6 +142,7 @@ export default function Home({ projects }: { projects: IProjects[] }) {
                     </motion.a>
                     <motion.a
                       href="https://www.tiktok.com/@itu_saturasa"
+                      target="_blank"
                       className="icon-button hover:after:content-['Tiktok'] group"
                       aria-label="Tiktok"
                       role="button"
