@@ -57,35 +57,35 @@ export default function Home({ projects }: { projects: IProjects[] }) {
               >
                 <motion.a
                   onClick={goToProjects}
-                  className="icon-button hover:after:content-['Projects'] group"
-                  aria-label="Project list"
+                  className="icon-button hover:after:content-['Video list'] group"
+                  aria-label="Video list"
                   role="button"
                   tabIndex={0}
                 >
                   <RxStack size={24} className="group-hover:text-rose-500" />
                 </motion.a>
                 <motion.a
-                  href="https://github.com/CLOEI"
+                  href="https://www.instagram.com/itu_saturasa/"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-button hover:after:content-['GitHub'] group"
-                  aria-label="GitHub"
+                  className="icon-button hover:after:content-['Instagram'] group"
+                  aria-label="Instagram"
                   role="button"
                   tabIndex={0}
                 >
-                  <AiOutlineGithub
+                  <FaInstagram
                     size={24}
                     className="group-hover:text-rose-500"
                   />
                 </motion.a>
                 <motion.a
-                  href="mailto:contact@cendy.xyz"
-                  className="icon-button hover:after:content-['Email'] group"
-                  aria-label="Email"
+                  href="https://www.tiktok.com/@itu_saturasa"
+                  className="icon-button hover:after:content-['Tiktok'] group"
+                  aria-label="Tiktok"
                   role="button"
                   tabIndex={0}
                 >
-                  <AiOutlineMail
+                  <FaTiktok
                     size={24}
                     className="group-hover:text-rose-500"
                   />
@@ -113,7 +113,7 @@ export default function Home({ projects }: { projects: IProjects[] }) {
                   >
                     <motion.a
                       onClick={goToProjects}
-                      className="icon-button hover:after:content-['Videos'] group"
+                      className="icon-button hover:after:content-['Video list'] group"
                       aria-label="Video list"
                       role="button"
                       tabIndex={0}
